@@ -1,4 +1,4 @@
-baseURL = 'https://cwille97.github.io'
+baseURL = 'https://cwille97.github.io/'
 languageCode = 'en-us'
 title = 'cwille97'
 theme = 'terminal'
