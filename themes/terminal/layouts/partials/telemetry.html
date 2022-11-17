@@ -1,0 +1,13 @@
+{{ if isset .Params "includetelemetrycontent" }}
+<button type="button" onclick="telemetryOptOut()">Opt out of telemetry</button>
+<div id="telemetry-opted-out"></div>
+<script>
+    if (localStorage.getItem("TELEMETRY_OPT_OUT")) {
+          document.getElementById('telemetry-opted-out').innerHTML = "You are opted out of telemetry";
+    }
+    function telemetryOptOut() {
+        localStorage.setItem("TELEMETRY_OPT_OUT", true);
+        location.reload(); // make it clear to the user that a change has occurred
+    }
+</script>
+{{ end }}
